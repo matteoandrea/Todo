@@ -2,7 +2,7 @@
 using Todo.Domain.Core.Command;
 using Todo.Domain.Core.Handler;
 using Todo.Domain.Features.Task.Commands;
-using Todo.Domain.Features.Task.Entity;
+using Todo.Domain.Features.Task.Core;
 using Todo.Domain.Features.Task.Repository;
 
 namespace Todo.Domain.Features.Task.Handler;

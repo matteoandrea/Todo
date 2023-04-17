@@ -1,6 +1,7 @@
 ﻿using Todo.Domain.Core;
+using Todo.Domain.Core.Entities;
 
-namespace Todo.Domain.Features.Task.Entity;
+namespace Todo.Domain.Features.Task.Core;
 
 public class TaskEntity : Entity
 {
