@@ -1,8 +1,10 @@
-﻿namespace Todo.Domain.Entities;
+﻿using Todo.Domain.Core;
 
-public class TodoItem : Entity
+namespace Todo.Domain.Features.Task.Entity;
+
+public class TaskEntity : Entity
 {
-    public TodoItem(string title, string user, DateTime date)
+    public TaskEntity(string title, string user, DateTime date)
     {
         Title = title;
         Done = false;

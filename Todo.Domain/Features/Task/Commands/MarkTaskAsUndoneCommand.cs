@@ -1,14 +1,14 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
-using Todo.Domain.Commands.Contracts;
+using Todo.Domain.Core.Command;
 
-namespace Todo.Domain.Commands;
+namespace Todo.Domain.Features.Task.Commands;
 
-public class MarkTodoAsUndoneCommand : Notifiable<Notification>, ICommand
+public class MarkTaskAsUndoneCommand : Notifiable<Notification>, ICommand
 {
-    public MarkTodoAsUndoneCommand() { }
+    public MarkTaskAsUndoneCommand() { }
 
-    public MarkTodoAsUndoneCommand(Guid id, string user)
+    public MarkTaskAsUndoneCommand(Guid id, string user)
     {
         Id = id;
         User = user;
@@ -22,7 +22,7 @@ public class MarkTodoAsUndoneCommand : Notifiable<Notification>, ICommand
         AddNotifications(
             new Contract<Notification>()
                 .Requires()
-                .IsGreaterOrEqualsThan(User, 6, "User", "Usaruio invalido")
+                .IsGreaterOrEqualsThan(User, 6, "User", "Invalid User")
         );
     }
 }

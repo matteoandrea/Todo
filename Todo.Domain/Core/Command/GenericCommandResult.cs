@@ -1,6 +1,4 @@
-﻿using Todo.Domain.Commands.Contracts;
-
-namespace Todo.Domain.Commands;
+﻿namespace Todo.Domain.Core.Command;
 
 public class GenericCommandResult : ICommandResult
 {
@@ -15,5 +13,5 @@ public class GenericCommandResult : ICommandResult
 
     public bool Success { get; set; }
     public string Message { get; set; }
-    public Object Data { get; set; }
+    public object Data { get; set; }
 }

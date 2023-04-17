@@ -1,6 +1,6 @@
-﻿using Todo.Domain.Commands.Contracts;
+﻿using Todo.Domain.Core.Command;
 
-namespace Todo.Domain.Handlers.Contracts;
+namespace Todo.Domain.Core.Handler;
 
 public interface IHandler<T> where T : ICommand
 {
