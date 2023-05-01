@@ -1,4 +1,4 @@
-﻿using Todo.Domain.Features.Task.Entity;
+﻿using Todo.Domain.Features.Task.Core;
 
 namespace Todo.Domain.Tests.TaskTests.EntityTests;
 
