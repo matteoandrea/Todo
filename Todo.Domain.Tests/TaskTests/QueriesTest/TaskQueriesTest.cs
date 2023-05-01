@@ -6,7 +6,7 @@ namespace Todo.Domain.Tests.TaskTests.QueriesTest;
 [TestClass]
 internal class TaskQueriesTest
 {
-	private readonly List<TaskEntity> _tasks;
+	private List<TaskEntity> _tasks;
 
 	public TaskQueriesTest()
 	{
@@ -23,7 +23,7 @@ internal class TaskQueriesTest
 	[TestMethod]
 	public void Valid_All_User_Tasks()
 	{
-		IQueryable<TaskEntity> result = _tasks.AsQueryable().Where(TaskQueries.GetAll("UserB"));
+		IQueryable<TaskEntity> result = _tasks.AsQueryable().Where(TaskQueries.GetAllTasks("UserB"));
 		Assert.AreEqual(2, result.Count());
 	}
 }
